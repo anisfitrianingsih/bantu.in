@@ -16,8 +16,8 @@
                                 <form class="user" method="POST" action="{{ route('login') }}">
                                     @csrf
                                     <div class="form-group">
-                                        <input id="email" type="email" class="form-control form-control-user @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus placeholder="{{ __('Masukkan Email') }}">
-                                        @error('email')
+                                        <input id="username" type="text" class="form-control form-control-user @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus placeholder="{{ __('Masukkan username') }}">
+                                        @error('username')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -50,11 +50,11 @@
                                         <a class="small" href="{{ route('password.request') }}">Forgot Password?</a>
                                     </div>
                                     @endif
-                                    @if (Route::has('register'))
+                                    <!-- @if (Route::has('register'))
                                     <div class="text-center">
                                         <a class="small" href="{{ route('register') }}">Create an Account!</a>
                                     </div>
-                                    @endif
+                                    @endif -->
                                 </form>
                             </div>
                         </div>

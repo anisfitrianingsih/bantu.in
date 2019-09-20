@@ -28,15 +28,19 @@ class DashboardController extends Controller
         $user = auth()->user()->role_id;
         if ($user === 1) {
 
-            return view('pemkab');
+            return view('pemkab.dashboard');
         } elseif ($user === 2) {
 
-            return view('dinasperikanan');
+            return view('dinasperikanan.dashboard');
         } elseif ($user === 3) {
 
-            return view('kelompokusaha');
+            return view('kelompokusaha.dashboard');
         } else {
             return "salah";
         }
+    }
+    public function pengajuan()
+    {
+        return view('kelompokusaha.pengajuan');
     }
 }

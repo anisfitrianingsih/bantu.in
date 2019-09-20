@@ -45,11 +45,11 @@
                                 <div class="text-center">
                                     <a class="small" href="{{ route('login') }}">Already have an account? Login!</a>
                                 </div>
-                                @if (Route::has('register'))
+                                <!-- @if (Route::has('register'))
                                 <div class="text-center">
                                     <a class="small" href="{{ route('register') }}">Create an Account!</a>
                                 </div>
-                                @endif
+                                @endif -->
                             </div>
                         </div>
                     </div>
